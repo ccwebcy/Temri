@@ -32,25 +32,16 @@
 
     let savedLanguage = null;
     try { savedLanguage = localStorage.getItem("temri-language"); } catch (_) {}
-    if (savedLanguage === "en" || savedLanguage === "el") {
-      applyLanguage(savedLanguage);
-      userHasChosenLanguage = true;
-    } else {
-      const browserLanguage = (navigator.language || "en").toLowerCase();
-      applyLanguage(browserLanguage.startsWith("el") ? "el" : "en");
-      // If browser language is not decisive, use country-level lookup as a fallback.
-      fetch("https://ipapi.co/json/").then((r) => { if (!r.ok) throw new Error("lookup failed"); return r.json(); }).then((data) => {
-        if (userHasChosenLanguage) return;
-        const country = String(data.country_code || "").toUpperCase();
-        if (country === "CY" || country === "GR") {
-          try { localStorage.setItem("temri-language", "el"); } catch (_) {}
-          applyLanguage("el");
-        } else if (country) {
-          try { localStorage.setItem("temri-language", "en"); } catch (_) {}
-          applyLanguage("en");
-        }
-    }).catch(() => {});
-    }
+
+    const browserLanguage = (navigator.language || "en").toLowerCase();
+    const initialLanguage = savedLanguage === "el" || savedLanguage === "en"
+      ? savedLanguage
+      : (browserLanguage.startsWith("el") ? "el" : "en");
+
+    applyLanguage(initialLanguage);
+    userHasChosenLanguage = savedLanguage === "en" || savedLanguage === "el";
+    document.documentElement.classList.remove("language-pending");
+
     languageSelect?.addEventListener("change", () => storeLanguage(languageSelect.value));
 
     window.TemriNavigation?.init();

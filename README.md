@@ -20,3 +20,7 @@ Run `python build.py` from this directory.
 
 ## Before publishing
 Replace `YOUR_EMAIL@example.com` in `partials/footer.html` and `contact.html` with the official Temri Group LTD email address. The company history currently contains editable draft prompts where verified dates and milestones should be added; no company dates or facts have been invented.
+
+## Language flicker fix
+
+The site now prevents the page from becoming visible until the saved language has been applied. The previous IP-based language lookup was removed because it could switch the page from English to Greek after the initial render. The selected language is stored in `localStorage` and is applied before the page becomes visible.

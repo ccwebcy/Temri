@@ -9,7 +9,21 @@
     rel="stylesheet"
   >
   <link rel="stylesheet" href="css/style.css">
-</head>
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("temri-language");
+        var lang = saved === "el" || saved === "en" ? saved : ((navigator.language || "en").toLowerCase().startsWith("el") ? "el" : "en");
+        document.documentElement.lang = lang;
+        document.documentElement.classList.add("language-pending");
+      } catch (e) {
+        document.documentElement.lang = "en";
+        document.documentElement.classList.add("language-pending");
+      }
+    }());
+  </script>
+  </head>
 <body>
 <header class="header">
     <div class="container header-inner">
@@ -28,8 +42,9 @@
       <nav class="nav" id="mainNav" aria-label="Main navigation">
         <a href="index.html" data-i18n="navHome">Home</a>
         <a href="about.html" data-i18n="navAbout">About</a>
-        <a href="contact.html" data-i18n="navContact">Contact us</a>
         <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+        <a href="contact.html" data-i18n="navContact">Contact us</a>
+        
       </nav>
 
       <div class="header-actions">
@@ -236,8 +251,8 @@
           <nav class="footer-links" aria-label="Footer navigation">
             <a href="index.html" data-i18n="navHome">Home</a>
         <a href="about.html" data-i18n="navAbout">About</a>
+         <a href="gallery.html" data-i18n="navGallery">Gallery</a>
             <a href="contact.html" data-i18n="navContact">Contact us</a>
-            <a href="gallery.html" data-i18n="navGallery">Gallery</a>
           </nav>
         </div>
 

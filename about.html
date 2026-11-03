@@ -4,9 +4,24 @@
   <title>About Us | Temri Group LTD</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("temri-language");
+        var lang = saved === "el" || saved === "en" ? saved : ((navigator.language || "en").toLowerCase().startsWith("el") ? "el" : "en");
+        document.documentElement.lang = lang;
+        document.documentElement.classList.add("language-pending");
+      } catch (e) {
+        document.documentElement.lang = "en";
+        document.documentElement.classList.add("language-pending");
+      }
+    }());
+  </script>
 </head>
+
 <body>
-<header class="header">
+  <header class="header">
     <div class="container header-inner">
 
       <a class="brand" href="index.html">
@@ -23,31 +38,22 @@
       <nav class="nav" id="mainNav" aria-label="Main navigation">
         <a href="index.html" data-i18n="navHome">Home</a>
         <a href="about.html" data-i18n="navAbout">About</a>
-        <a href="contact.html" data-i18n="navContact">Contact us</a>
         <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+        <a href="contact.html" data-i18n="navContact">Contact us</a>
+        
       </nav>
 
       <div class="header-actions">
 
         <label for="languageSelect" hidden>Language</label>
 
-        <select
-          id="languageSelect"
-          class="language-select"
-          aria-label="Select language"
-        >
+        <select id="languageSelect" class="language-select" aria-label="Select language">
           <option value="en">ENGLISH</option>
           <option value="el">ΕΛΛΗΝΙΚΑ</option>
         </select>
 
-        <button
-          class="menu-toggle"
-          id="menuToggle"
-          aria-expanded="false"
-          aria-controls="mainNav"
-          aria-label="Open menu"
-          type="button"
-        >
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu"
+          type="button">
           ☰
         </button>
 
@@ -55,7 +61,7 @@
     </div>
   </header>
 
-<main>
+  <main>
     <section class="page-hero">
       <div class="container page-hero-content reveal">
         <div class="kicker" data-i18n="aboutKicker">ABOUT TEMRI GROUP</div>
@@ -95,13 +101,27 @@
       <div class="container">
         <div class="reveal">
           <div class="section-label" data-i18n="historyStoryLabel">The story so far</div>
-          <h2 class="section-title" data-i18n="historyStoryTitle">A journey shaped by <span class="purple">ambition.</span></h2>
-          <p class="section-text" data-i18n="historyStoryText">Add the founding story of Temri Group LTD here, including its original vision and development in aquaculture.</p>
+          <h2 class="section-title" data-i18n="historyStoryTitle">A journey shaped by <span
+              class="purple">ambition.</span></h2>
+          <p class="section-text" data-i18n="historyStoryText">Add the founding story of Temri Group LTD here, including
+            its original vision and development in aquaculture.</p>
         </div>
         <div class="card-grid">
-          <article class="card reveal"><div class="card-number">01</div><h3 data-i18n="milestone1Title">Foundation</h3><p data-i18n="milestone1Text">Add the year of establishment and the company's beginnings.</p></article>
-          <article class="card reveal"><div class="card-number">02</div><h3 data-i18n="milestone2Title">Growth</h3><p data-i18n="milestone2Text">Describe key developments, achievements and growth over the years.</p></article>
-          <article class="card reveal"><div class="card-number">03</div><h3 data-i18n="milestone3Title">Looking ahead</h3><p data-i18n="milestone3Text">Share the company's future goals and vision for sustainable aquaculture.</p></article>
+          <article class="card reveal">
+            <div class="card-number">01</div>
+            <h3 data-i18n="milestone1Title">Foundation</h3>
+            <p data-i18n="milestone1Text">Add the year of establishment and the company's beginnings.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-number">02</div>
+            <h3 data-i18n="milestone2Title">Growth</h3>
+            <p data-i18n="milestone2Text">Describe key developments, achievements and growth over the years.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-number">03</div>
+            <h3 data-i18n="milestone3Title">Looking ahead</h3>
+            <p data-i18n="milestone3Text">Share the company's future goals and vision for sustainable aquaculture.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -159,7 +179,7 @@
 
   </main>
 
-<footer class="footer">
+  <footer class="footer">
     <div class="container">
 
       <div class="footer-grid">
@@ -194,9 +214,9 @@
 
           <nav class="footer-links" aria-label="Footer navigation">
             <a href="index.html" data-i18n="navHome">Home</a>
-        <a href="about.html" data-i18n="navAbout">About</a>
-            <a href="contact.html" data-i18n="navContact">Contact us</a>
+            <a href="about.html" data-i18n="navAbout">About</a>
             <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+            <a href="contact.html" data-i18n="navContact">Contact us</a>
           </nav>
         </div>
 
@@ -241,4 +261,5 @@
   <script src="js/gallery.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
+
 </html>
