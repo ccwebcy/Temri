@@ -1,30 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Gallery | Temri Group LTD</title>
 
-  <link rel="stylesheet" href="css/style.css">
-
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-  <!-- =========================
-       SHARED HEADER
-  ========================== -->
-
-  <header class="header">
+<header class="header">
     <div class="container header-inner">
 
       <a class="brand" href="index.html">
-        <span class="brand-mark">≈</span>
+        <span class="brand-mark"><img src="assets/temri-logo.png" alt="TEMRI GROUP LTD logo"></span>
 
         <span>
           <span class="brand-name">TEMRI GROUP LTD</span>
@@ -36,8 +27,8 @@
 
       <nav class="nav" id="mainNav" aria-label="Main navigation">
         <a href="index.html" data-i18n="navHome">Home</a>
-        <a href="history.html" data-i18n="navHistory">History</a>
         <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="contact.html" data-i18n="navContact">Contact us</a>
         <a href="gallery.html" data-i18n="navGallery">Gallery</a>
       </nav>
 
@@ -69,12 +60,7 @@
     </div>
   </header>
 
-
-  <!-- =========================
-       MAIN CONTENT
-  ========================== -->
-
-  <main>
+<main>
 
     <!-- HERO SECTION -->
 
@@ -214,12 +200,7 @@
 
   </main>
 
-
-  <!-- =========================
-       SHARED FOOTER
-  ========================== -->
-
-  <footer class="footer">
+<footer class="footer">
     <div class="container">
 
       <div class="footer-grid">
@@ -229,7 +210,7 @@
         <div class="footer-brand">
 
           <a class="brand" href="index.html">
-            <span class="brand-mark">≈</span>
+            <span class="brand-mark"><img src="assets/temri-logo.png" alt="TEMRI GROUP LTD logo"></span>
 
             <span>
               <span class="brand-name">TEMRI GROUP LTD</span>
@@ -254,8 +235,8 @@
 
           <nav class="footer-links" aria-label="Footer navigation">
             <a href="index.html" data-i18n="navHome">Home</a>
-            <a href="history.html" data-i18n="navHistory">History</a>
-            <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+            <a href="contact.html" data-i18n="navContact">Contact us</a>
             <a href="gallery.html" data-i18n="navGallery">Gallery</a>
           </nav>
         </div>
@@ -271,7 +252,7 @@
               YOUR_EMAIL@example.com
             </a>
 
-            <a href="about.html#contact" data-i18n="contactButton">
+            <a href="contact.html" data-i18n="contactButton">
               Contact our team
             </a>
           </div>
@@ -294,11 +275,7 @@
 
     </div>
   </footer>
-
-
-  <!-- LIGHTBOX FOR GALLERY PHOTOS -->
-
-  <div
+<div
     id="galleryLightbox"
     class="gallery-lightbox"
     aria-hidden="true"
@@ -336,10 +313,9 @@
     </button>
   </div>
 
-
-  <!-- JAVASCRIPT -->
-
+  <script src="js/translations.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/gallery.js" defer></script>
   <script src="js/main.js" defer></script>
-
 </body>
 </html>
