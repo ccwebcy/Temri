@@ -1,8 +1,34 @@
 /* Gallery lightbox: keyboard, touch, focus restoration, and controls. */
 window.TemriGallery = (() => {
   'use strict';
+  function initVideo() {
+    const video = document.getElementById('galleryVideo');
+    const playButton = document.getElementById('galleryVideoPlay');
+    if (!video || !playButton) return;
+
+    const syncPlayButton = () => {
+      playButton.classList.toggle('is-hidden', !video.paused && !video.ended);
+      playButton.setAttribute('aria-label', video.paused || video.ended ? 'Play video' : 'Pause video');
+    };
+
+    playButton.addEventListener('click', () => {
+      if (video.paused || video.ended) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
+
+    video.addEventListener('play', syncPlayButton);
+    video.addEventListener('pause', syncPlayButton);
+    video.addEventListener('ended', syncPlayButton);
+    video.addEventListener('loadedmetadata', syncPlayButton);
+    syncPlayButton();
+  }
+
   function init() {
     const lightbox = document.getElementById('galleryLightbox');
+    initVideo();
     if (!lightbox) return;
     const image = lightbox.querySelector('.lightbox-image');
     const close = lightbox.querySelector('.lightbox-close');

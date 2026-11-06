@@ -99,113 +99,99 @@
     </section>
 
 
-    <!-- GALLERY SECTION -->
+    <!-- VIDEO SECTION -->
 
-    <section class="section">
+    <section class="section" id="gallery-video">
       <div class="container">
+        <div class="reveal gallery-section-intro">
+          <div class="section-label" data-i18n="galleryVideoLabel">Featured video</div>
+          <h2 class="section-title" data-i18n="galleryVideoTitle">
+            See our world <span class="purple">in motion.</span>
+          </h2>
+          <p class="section-text" data-i18n="galleryVideoText">
+            Discover the marine environment and aquaculture through video.
+          </p>
+        </div>
 
-        <div class="reveal">
+        <div class="gallery-video-wrap reveal">
+          <div class="gallery-video-frame">
+            <!-- Replace assets/gallery-video.mp4 with your own video file. -->
+            <video
+              id="galleryVideo"
+              class="gallery-video"
+              controls
+              playsinline
+              preload="metadata"
+              poster="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1800&q=90"
+              aria-label="Featured Temri Group video"
+            >
+              <source src="assets/gallery-video.mp4" type="video/mp4">
+              <span data-i18n="galleryVideoFallback">Your browser does not support the video element.</span>
+            </video>
 
-          <div class="section-label" data-i18n="galleryLabel">
-            Photo collection
+            <button class="gallery-video-play" id="galleryVideoPlay" type="button" aria-label="Play video">
+              <span class="gallery-video-play-icon" aria-hidden="true"></span>
+            </button>
           </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- IMAGES SECTION -->
+
+    <section class="section alt" id="gallery-images">
+      <div class="container">
+        <div class="reveal gallery-section-intro">
+          <div class="section-label" data-i18n="galleryLabel">Photo collection</div>
           <h2 class="section-title" data-i18n="galleryHeading">
             Life around the <span class="purple">sea.</span>
           </h2>
-
           <p class="section-text" data-i18n="galleryDescription">
-            Explore our marine environment, facilities and
-            the world of aquaculture.
+            Explore our marine environment, facilities and the world of aquaculture.
           </p>
-
         </div>
-
-
-        <!-- GALLERY PHOTOS -->
 
         <div class="gallery-grid">
 
           <a class="gallery-item reveal"
              href="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1400&q=90"
              aria-label="View aquaculture photograph">
-
-            <img
-              src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1000&q=85"
-              alt="Underwater scene"
-              loading="lazy"
-            >
-
+            <img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1000&q=85" alt="Underwater scene" loading="lazy">
             <span data-i18n="gallery1">Aquaculture</span>
           </a>
-
 
           <a class="gallery-item reveal"
              href="https://images.unsplash.com/photo-1510130387422-82bed34b37e9?auto=format&fit=crop&w=1400&q=90"
              aria-label="View marine life photograph">
-
-            <img
-              src="https://images.unsplash.com/photo-1510130387422-82bed34b37e9?auto=format&fit=crop&w=1000&q=85"
-              alt="Marine life"
-              loading="lazy"
-            >
-
+            <img src="https://images.unsplash.com/photo-1510130387422-82bed34b37e9?auto=format&fit=crop&w=1000&q=85" alt="Marine life" loading="lazy">
             <span data-i18n="gallery2">Marine life</span>
           </a>
-
 
           <a class="gallery-item reveal"
              href="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1400&q=90"
              aria-label="View ocean photograph">
-
-            <img
-              src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=85"
-              alt="Ocean water"
-              loading="lazy"
-            >
-
+            <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=85" alt="Ocean water" loading="lazy">
             <span data-i18n="gallery3">Our environment</span>
           </a>
-
 
           <a class="gallery-item reveal"
              href="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=90"
              aria-label="View ocean waves photograph">
-
-            <img
-              src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85"
-              alt="Ocean waves"
-              loading="lazy"
-            >
-
+            <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85" alt="Ocean waves" loading="lazy">
             <span data-i18n="gallery4">The blue economy</span>
           </a>
-
 
           <a class="gallery-item reveal"
              href="https://images.unsplash.com/photo-1498623116890-37e912163d5d?auto=format&fit=crop&w=1400&q=90"
              aria-label="View underwater environment photograph">
-
-            <img
-              src="https://images.unsplash.com/photo-1498623116890-37e912163d5d?auto=format&fit=crop&w=1000&q=85"
-              alt="Underwater environment"
-              loading="lazy"
-            >
-
+            <img src="https://images.unsplash.com/photo-1498623116890-37e912163d5d?auto=format&fit=crop&w=1000&q=85" alt="Underwater environment" loading="lazy">
             <span data-i18n="gallery5">Beneath the sea</span>
           </a>
-
 
           <a class="gallery-item reveal"
              href="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1400&q=90"
              aria-label="View marine habitat photograph">
-
-            <img
-              src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1000&q=85"
-              alt="Marine habitat"
-              loading="lazy"
-            >
-
+            <img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1000&q=85" alt="Marine habitat" loading="lazy">
             <span data-i18n="gallery6">Marine habitats</span>
           </a>
 
@@ -265,6 +251,10 @@
           <div class="footer-links">
             <a href="mailto:YOUR_EMAIL@example.com">
               YOUR_EMAIL@example.com
+            </a>
+
+            <a href="tel:+35724332723">
+              +357 24332723
             </a>
 
             <a href="contact.html" data-i18n="contactButton">

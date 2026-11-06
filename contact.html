@@ -21,9 +21,8 @@
     }());
   </script>
 </head>
-
 <body>
-  <header class="header">
+<header class="header">
     <div class="container header-inner">
 
       <a class="brand" href="index.html">
@@ -42,20 +41,30 @@
         <a href="about.html" data-i18n="navAbout">About</a>
         <a href="gallery.html" data-i18n="navGallery">Gallery</a>
         <a href="contact.html" data-i18n="navContact">Contact us</a>
-
+        
       </nav>
 
       <div class="header-actions">
 
         <label for="languageSelect" hidden>Language</label>
 
-        <select id="languageSelect" class="language-select" aria-label="Select language">
+        <select
+          id="languageSelect"
+          class="language-select"
+          aria-label="Select language"
+        >
           <option value="en">ENGLISH</option>
           <option value="el">ΕΛΛΗΝΙΚΑ</option>
         </select>
 
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu"
-          type="button">
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mainNav"
+          aria-label="Open menu"
+          type="button"
+        >
           ☰
         </button>
 
@@ -63,7 +72,7 @@
     </div>
   </header>
 
-  <main>
+<main>
     <section class="page-hero">
       <div class="container page-hero-content reveal">
         <div class="kicker" data-i18n="contactPageKicker">GET IN TOUCH</div>
@@ -78,27 +87,30 @@
             <div class="card-number">01</div>
             <h3 data-i18n="contactEmailLabel">Email enquiries</h3>
             <p data-i18n="contactEmailText">For business enquiries, please contact our team by email.</p>
-            <!-- Replace the placeholder address below with Temri Group LTD's official email. -->
+          </n>
             <p><a class="btn" href="mailto:YOUR_EMAIL@example.com" data-i18n="emailButton">Email us →</a></p>
             <p class="section-text"><small>Website setup: replace YOUR_EMAIL@example.com with your official company
                 email address.</small></p>
           </article>
           <article class="card reveal">
             <div class="card-number">02</div>
-            <h3 data-i18n="contactPhoneLabel">Telephone</h3>
-            <p><a href="tel:+35724332723">+357 24332723</a></p>
+            <h3 data-i18n="contactPhoneLabel">Call us</h3>
+            <p data-i18n="contactPhoneText">You can call us from 8:00 a.m. to 4:00 p.m., Monday – Friday.</p>
+            <p><a class="btn" href="tel:+35724332723" data-i18n="contactPhoneButton">Call →</a></p>
+             <p class="section-text"><small>+357 24332723</small></p>
           </article>
           <article class="card reveal">
             <div class="card-number">03</div>
-            <h3 data-i18n="contactFaxLabel">Fax</h3>
-            <p data-i18n="contactFaxText">Example for now</p>
+            <h3 data-i18n="contactLocation1Label">Our location</h3>
+            <p data-i18n="contactLocation1Text">For business enquiries, please contact our team by email.</p>
+            <p><a class="btn" href="https://maps.app.goo.gl/c1t5XPEvVKk795G79" data-i18n="contactLocation1Button">Navigate →</a></p>
           </article>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+<footer class="footer">
     <div class="container">
 
       <div class="footer-grid">
@@ -133,10 +145,10 @@
 
           <nav class="footer-links" aria-label="Footer navigation">
             <a href="index.html" data-i18n="navHome">Home</a>
-            <a href="about.html" data-i18n="navAbout">About</a>
-            <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+         <a href="gallery.html" data-i18n="navGallery">Gallery</a>
             <a href="contact.html" data-i18n="navContact">Contact us</a>
-
+           
           </nav>
         </div>
 
@@ -151,9 +163,14 @@
               YOUR_EMAIL@example.com
             </a>
 
+            <a href="tel:+35724332723">
+              +357 24332723
+            </a>
+            
             <a href="contact.html" data-i18n="contactButton">
               Contact our team
             </a>
+
           </div>
         </div>
 
@@ -181,5 +198,4 @@
   <script src="js/gallery.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
-
 </html>
